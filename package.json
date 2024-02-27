@@ -2,12 +2,6 @@
   "name": "pizza-shop-api",
   "module": "index.ts",
   "type": "module",
-  "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
-    "@types/bun": "latest",
-    "drizzle-kit": "^0.20.14",
-    "pg": "^8.11.3"
-  },
   "scripts": {
     "dev": "bun --watch src/http/server.ts",
     "build": "bun build src/http/server.ts",
@@ -16,16 +10,25 @@
     "migrate": "bun src/db/migrate.ts",
     "seed": "bun src/db/seed.ts",
     "studio": "drizzle-kit studio",
-    "test": "bun test"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "test": "bun test",
+    "lint": "eslint --fix src --ext ts"
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
+    "@rocketseat/eslint-config": "^2.2.2",
     "drizzle-orm": "^0.29.4",
     "elysia": "^0.8.17",
+    "eslint": "^8.57.0",
     "postgres": "^3.4.3",
     "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.20.14",
+    "eslint-plugin-drizzle": "^0.2.3",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "pg": "^8.11.3",
+    "typescript": "^5.3.3"
   }
 }
